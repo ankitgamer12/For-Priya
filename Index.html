@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ask Her Out</title>
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -20,18 +20,36 @@
         >from
         <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
       </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
       <script
         type="text/javascript"
         async
         src="https://tenor.com/embed.js"
-      ></script>
+      >
+    </script>
       <h1>Will You be my patni? 🤗</h1>
       <p>haan kardijiye radhika ji.</p>
 
-      <div class="btn">
-        <a href="yes.html">Yes</a>
-        <a href="yes.html">yes</a>
-      </div>
+      
+        <a href="yes.html" class="btn btn-success" >Yes</a>
+        <a class="btn btn-danger" id="noBtn">No</a>
+      <script>
+  const noBtn = document.getElementById('noBtn');
+  noBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const btnWidth = noBtn.offsetWidth;
+    const btnHeight = noBtn.offsetHeight;
+    const padding = 20;
+    const maxX = window.innerWidth - btnWidth - padding;
+    const maxY = window.innerHeight - btnHeight - padding;
+    const randX = Math.floor(Math.random() * maxX);
+    const randY = Math.floor(Math.random() * maxY);
+    noBtn.style.position = 'absolute';
+    noBtn.style.left = randX + 'px';
+    noBtn.style.top = randY + 'px';
+  });
+</script>
     </div>
+    
   </body>
 </html>
